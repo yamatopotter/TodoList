@@ -29,6 +29,7 @@ header{
 }
 
 main{
+    padding: 0 20px;
     flex: 1 0 auto;
 }
 
@@ -80,4 +81,14 @@ footer{
     width: 100%;
     background-color: #0a0a0a;
     flex-shrink: 0;
+}
+
+@media (max-width: 600px){
+    .formToDoList{
+        display:flex;
+        flex-direction: column;
+        gap:20px;
+        align-items: center;
+        justify-content: center;
+    }
 }
