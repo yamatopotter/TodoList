@@ -1,0 +1,83 @@
+$background-color: #3498db;
+$button-color: #9b59b6;
+$button-color-click: #8e44ad;
+$white: #efefef;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $white;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $background-color;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    text-align: center;
+    padding:40px;
+    background-color: #0a0a0a;
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+.formToDoList{
+    padding: 40px 0;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    .inputToDo{
+        padding: 10px;
+        width:250px;
+        color: #0a0a0a;
+        margin-right: 10px;
+    }
+    .btn{
+        padding: 10px;
+        border-radius: 20px;
+        border:none;
+        text-transform: uppercase;
+        background: $button-color;
+        font-weight: bold;
+        box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+        transition: .2s;
+        &:active{
+            background-color: $button-color-click;
+            box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.75);
+        }
+    }
+}
+
+.todoList{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto 40px;
+    gap: 15px;
+    .item{
+        display: flex;
+        gap: 15px;
+        .todoCheckbox:checked+label{
+            text-decoration: line-through;
+        }
+    }
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    background-color: #0a0a0a;
+    flex-shrink: 0;
+}

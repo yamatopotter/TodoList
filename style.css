@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #efefef;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #3498db;
+  font-size: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 40px;
+  background-color: #0a0a0a;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.formToDoList {
+  padding: 40px 0;
+  display: block;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.formToDoList .inputToDo {
+  padding: 10px;
+  width: 250px;
+  color: #0a0a0a;
+  margin-right: 10px;
+}
+
+.formToDoList .btn {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+  background: #9b59b6;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.formToDoList .btn:active {
+  background-color: #8e44ad;
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.todoList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 40px;
+  gap: 15px;
+}
+
+.todoList .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.todoList .item .todoCheckbox:checked + label {
+  text-decoration: line-through;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  background-color: #0a0a0a;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+/*# sourceMappingURL=style.css.map */
