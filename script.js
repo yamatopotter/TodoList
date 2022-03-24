@@ -44,7 +44,30 @@ function addItemList(){
     let checkboxName = `chkItem${idItem}`;
     let item = {item: `${content.value}`};
 
-    listToDo.insertAdjacentHTML("beforeend",`<div class="item animate__animated animate__bounceIn" id="item${idItem}"><input type="checkbox" name="${checkboxName}" id="${checkboxName}" class="todoCheckbox" onchange="remItem(${idItem})" ><label for="${checkboxName}" id="label${idItem}">${content.value}</label></div>`);
+    let divEfeito = document.createElement('div');
+    let checkboxTarefa = document.createElement('input');
+    let labelCheckbox = document.createElement('label');
+
+    // Criação da div
+    divEfeito.classList.add("item", "animate__animated", "animate__bounceIn");
+    divEfeito.id = `item${idItem}`;
+    // Criação do checkbox
+    checkboxTarefa.type='checkbox';
+    checkboxTarefa.name=checkboxName;
+    checkboxTarefa.id=checkboxName;
+    checkboxTarefa.classList.add("todoCheckbox");
+    // Criação da label
+    labelCheckbox.htmlFor = checkboxName;
+    labelCheckbox.id = `label${idItem}`;
+    labelCheckbox.appendChild(document.createTextNode(content.value))
+
+    divEfeito.appendChild(checkboxTarefa);
+    divEfeito.appendChild(labelCheckbox);
+    listToDo.appendChild(divEfeito);
+
+    checkboxTarefa.addEventListener('change', () => remItem(idItem));
+    console.log(checkboxTarefa);
+    // listToDo.insertAdjacentHTML("beforeend",`<div class="item animate__animated animate__bounceIn" id="item${idItem}"><input type="checkbox" name="${checkboxName}" id="${checkboxName}" class="todoCheckbox" onchange="remItem(${idItem})" ><label for="${checkboxName}" id="label${idItem}">${content.value}</label></div>`);
     content.value = '';
     listItem.push(item);
     console.log(listItem);
