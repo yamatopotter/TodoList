@@ -2,6 +2,8 @@ $background-color: #3498db;
 $button-color: #9b59b6;
 $button-color-click: #8e44ad;
 $white: #efefef;
+$yellow:#f3e16b;
+$green: #2ecc71;
 
 *{
     margin: 0;
@@ -17,7 +19,7 @@ html, body{
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: $background-color;
-    font-size: 1.2em;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -31,6 +33,16 @@ header{
 main{
     padding: 0 20px;
     flex: 1 0 auto;
+}
+
+@keyframes waitingToDo {
+    from{
+        background-color: #f7ca18;
+    }
+
+    to{
+        background-color: #d6b11b;
+    }
 }
 
 .formToDoList{
@@ -69,8 +81,28 @@ main{
     .item{
         display: flex;
         gap: 15px;
-        .todoCheckbox:checked+label{
-            text-decoration: line-through;
+        padding: 10px;
+        width:300px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .undone{
+        background-color: $yellow;
+        color: #0a0a0a;
+        animation-name: waitingToDo;
+        animation-duration: 3s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        i{
+            color: #0a0a0a;
+        }
+    }
+
+    .done{
+        background-color: $green;
+        color: $white;
+        i{
+            color: $white;
         }
     }
 }

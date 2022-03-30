@@ -13,7 +13,7 @@ html, body {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #3498db;
-  font-size: 1.2em;
+  font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,6 +34,24 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+}
+
+@-webkit-keyframes waitingToDo {
+  from {
+    background-color: #f7ca18;
+  }
+  to {
+    background-color: #d6b11b;
+  }
+}
+
+@keyframes waitingToDo {
+  from {
+    background-color: #f7ca18;
+  }
+  to {
+    background-color: #d6b11b;
+  }
 }
 
 .formToDoList {
@@ -91,10 +109,36 @@ main {
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.todoList .item .todoCheckbox:checked + label {
-  text-decoration: line-through;
+.todoList .undone {
+  background-color: #f3e16b;
+  color: #0a0a0a;
+  -webkit-animation-name: waitingToDo;
+          animation-name: waitingToDo;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.todoList .undone i {
+  color: #0a0a0a;
+}
+
+.todoList .done {
+  background-color: #2ecc71;
+  color: #efefef;
+}
+
+.todoList .done i {
+  color: #efefef;
 }
 
 footer {
