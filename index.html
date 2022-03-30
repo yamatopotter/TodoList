@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -18,8 +19,10 @@
     
     <main>
         <section class="formToDoList">
-            <input type="text" name="todo" class="inputToDo" id="newListContent">
-            <button class="btn" id="btnAddItem">Adicionar tarefa a lista</button>
+            <form id="formToDoList">
+                <input type="text" name="todo" class="inputToDo" id="newListContent">
+                <button class="btn" id="btnAddItem" type="submit">Adicionar tarefa a lista</button>
+            </form>         
         </section>
 
         <section class="todoList" id="todoList">
@@ -29,6 +32,6 @@
     <footer>
         <p>Desenvolvido por <a href="https://github.com/yamatopotter">Matheus Barreto</a></p>
     </footer>
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
